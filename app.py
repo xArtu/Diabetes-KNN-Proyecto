@@ -53,7 +53,7 @@ def index():
 
         # Realizar la predicción
         prediction = knn_model.predict(input_data)
-        result = "Tiene diabetes" if prediction[0] == 1 else "No tiene diabetes"
+        result = "Es probable que tenga diabetes" if prediction[0] == 1 else "Es probable que no tenga diabetes"
 
         return render_template("index.html", result=result)
 
